@@ -5,4 +5,4 @@
 
 
 #### _fraud_voting_model_api.py_ 
-This is a Python script for deploying a fraud detection model using FastAPI and Pycaret. The script loads a pre-trained model, defines a predict function, and runs a FastAPI app to make predictions on incoming data. 
+This is a Python script for deploying a fraud detection model using FastAPI and Pycaret. The script loads a pre-trained model, defines a predict function, and runs a FastAPI app to make predictions on incoming data.
