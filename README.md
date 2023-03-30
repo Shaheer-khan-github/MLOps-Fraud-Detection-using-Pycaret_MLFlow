@@ -6,3 +6,7 @@
 
 #### [fraud_voting_model_api.py](fraud_voting_model_api.py)
 This is a Python script for deploying a fraud detection model using FastAPI and Pycaret. The script loads a pre-trained model, defines a predict function, and runs a FastAPI app to make predictions on incoming data.
+
+
+#### [model_utils.py](model_utils.py)
+The code defines a function called get_raw_data() that reads a CSV file containing credit card data, performs undersampling, and splits the data into training and testing sets. It then returns the resulting training and testing dataframes.
