@@ -23,10 +23,10 @@ def get_raw_data():
 """Get raw data
             Parameters
             ----------
-            nothing
+            Nothing
             
             Returns
-            train dataset and test dataset
+            Train dataset and Test dataset
             -------
             """
         
