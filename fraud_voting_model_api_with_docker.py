@@ -27,4 +27,4 @@ def predict(Time, V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port=8001)
+    uvicorn.run(app, host='0.0.0.0', port=8007)
