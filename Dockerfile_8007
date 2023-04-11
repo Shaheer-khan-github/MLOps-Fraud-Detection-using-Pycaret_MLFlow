@@ -8,8 +8,12 @@ ADD . /app
 
 RUN apt-get update && apt-get install -y libgomp1
 
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip
 
-EXPOSE 8000
+RUN pip --default-timeout=6000 install pycaret
+
+RUN pip install -r requirements2.txt
+
+EXPOSE 8007
 
 CMD ["python", "fraud_voting_model_api_with_docker.py"]    
