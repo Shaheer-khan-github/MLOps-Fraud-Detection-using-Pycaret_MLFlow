@@ -12,5 +12,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-CMD ["python", "fraud_voting_model_api.py"]    
-
+CMD ["python", "fraud_voting_model_api_with_docker.py"]    
