@@ -11,11 +11,11 @@ contains trainings with different processing steps like fixing imbalance, removi
 [2. Train_and_Evaluate_the_Model.ipynb](2.%20Train_and_Evaluate_the_Model.ipynb)
 contains the training of the selected model and evaluation of the best classifier.
 
-[3. Deploy_the_Model.ipynb](3.%20Deploy_the_Model.ipynb)
+[3. Optimize_the_Model](3.%20Optimize_the_Model.ipynb)
 contains the code for hyper parameter tuning and voting classifier then created REST API for the model using FastAPI and create a Docker [image](Dockerfile) for the API.
 
 [fraud_voting_model_api.py](fraud_voting_model_api.py)
-This is a Python script for deploying a fraud detection model using FastAPI and Pycaret. The script loads a pre-trained model, defines a predict function, and runs a FastAPI app to make predictions on incoming data. The weight file of `fraud_voting_model_api.py` is [Weight](fraud_voting_model_api.pkl)
+This script defines a FastAPI app that loads a pre-trained fraud detection model, and provides two endpoints (Post and get request) to make predictions on new data. The endpoints accept 30 input features related to a financial transaction and return the model's binary classification prediction of fraud or not fraud. The app is run locally on port 8001 using uvicorn. The weight file of `fraud_voting_model_api.py` is [Weight](fraud_voting_model_api.pkl)
 
 [model_utils.py](model_utils.py) 
 The code defines a function called get_raw_data() that reads a CSV file containing credit card data, performs undersampling, and splits the data into training and testing sets. It then returns the resulting training and testing dataframes.
