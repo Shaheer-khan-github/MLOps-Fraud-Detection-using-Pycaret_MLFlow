@@ -3,7 +3,14 @@
 ![Credit Card Fraud](Credit%20card_fraud.jpg)
 
  PyCaret is a low-code machine learning library that allows you to quickly build and train models, while MLflow provides a robust platform for managing the entire machine learning lifecycle.
- Together, these tools make it easy to develop and deploy fraud detection mPodels with confidence. By using PyCaret's built-in functionalities for data preprocessing, feature engineering, model training, and hyperparameter tuning, you can quickly build high-performing models that are optimized for fraud detection. And with MLflow's tracking and versioning capabilities, you can easily manage your experiments, reproduce your results, and collaborate with your team.
+ Together, these tools make it easy to develop and deploy fraud detection models with confidence. By using PyCaret's built-in functionalities for data preprocessing, feature engineering, model training, and hyperparameter tuning, you can quickly build high-performing models that are optimized for fraud detection. And with MLflow's tracking and versioning capabilities, you can easily manage your experiments, reproduce your results, and collaborate with your team.
+
+## **Key Tools or Libraries**
+1. PyCaret: a low-code machine learning library for building and training models.
+2. MLflow: a platform for managing the machine learning lifecycle, including experiment tracking and versioning.
+3. FastAPI: a modern, fast (high-performance) web framework for building APIs with Python.
+4. Docker: a containerization platform for packaging software into portable, self-contained environments.
+5. Uvicorn: a lightning-fast ASGI server for Python, used to run the FastAPI app.
 
 [1. Model_Training.ipynb](1.%20Model_Training.ipynb)
 contains trainings with different processing steps like fixing imbalance, removing outliers, and feature engineering. It also contains the Experiment Tracking with MLflow.
