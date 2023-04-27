@@ -12,6 +12,7 @@
 4. `Docker:` a containerization platform for packaging software into portable, self-contained environments.
 5. `Uvicorn:` a lightning-fast ASGI server for Python, used to run the FastAPI app.
 
+## **API and Models**
 [1. Model_Training.ipynb](1.%20Model_Training.ipynb)
 contains trainings with different processing steps like fixing imbalance, removing outliers, and feature engineering. It also contains the Experiment Tracking with MLflow.
 
