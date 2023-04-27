@@ -14,9 +14,25 @@ contains the training of the selected model and evaluation of the best classifie
 [3. Optimize_the_Model](3.%20Optimize_the_Model.ipynb)
 contains the code for hyper parameter tuning and voting classifier then created REST API for the model using FastAPI and create a Docker [image](Dockerfile) for the API.
 
-[fraud_voting_model_api.py](fraud_voting_model_api.py)
-This script defines a FastAPI app that loads a pre-trained fraud detection model, and provides two endpoints (Post and get request) to make predictions on new data. The endpoints accept 30 input features related to a financial transaction and return the model's binary classification prediction of fraud or not fraud. The app is run locally on port 8001 using uvicorn. The weight file of `fraud_voting_model_api.py` is [Weight](fraud_voting_model_api.pkl)
+[4. Testing_of_API](4.%20Testing_of_API.ipynb)
+This code file uses a trained model for fraud voting detection and deploys it using a Docker container. It loads data from a file, checks the Docker images and starts the API container. It then sends a request to the API endpoint for the prediction of the target variable for a particular record and prints the response. The response contains the predicted target value for the specified record.
 
 [model_utils.py](model_utils.py) 
 The code defines a function called get_raw_data() that reads a CSV file containing credit card data, performs undersampling, and splits the data into training and testing sets. It then returns the resulting training and testing dataframes.
+
+[fraud_voting_model_api.py](fraud_voting_model_api.py)
+This script defines a FastAPI app that loads a pre-trained fraud detection model, and provides two endpoints (Post and get request) to make predictions on new data. The endpoints accept 30 input features related to a financial transaction and return the model's binary classification prediction of fraud or not fraud. The app is run locally on port 8001 using uvicorn. The weight file of `fraud_voting_model_api.py` is [Weight](fraud_voting_model_api.pkl)
+
+[fraud_voting_model_api_with_docker](fraud_voting_model_api_with_docker.py)
+This Python script defines a FastAPI for deploying a fraud voting model using the PyCaret classification library. It loads a pre-trained pipeline model and defines two endpoints for making predictions: POST /predict and GET /get_predict. The app runs on a Uvicorn server listening on port 8007.
+
+[Dockerfile_8007](Dockerfile_8007)
+This is a Dockerfile that defines a Python environment with specific dependencies, installs pycaret and additional packages specified in requirements2.txt, and exposes port 8007. The final command runs a Python script for deploying a fraud voting model API. 
+
+`Note:` 
+1. The port should be different from the other already existing ports. As you can see the port in 
+[Docker file](Dockerfile) is different from [Dockerfile_8007](Dockerfile_8007) and both have different `requirements.txt` files.
+
+2. The [`fraud_voting_model_api_with_docker.py`](fraud_voting_model_api_with_docker.py) file is different to [`fraud_voting_model_api.py`](fraud_voting_model_api.py) file regarding the API endpoints, ports and host IP. 
+
 
